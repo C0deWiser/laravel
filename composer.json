@@ -1,0 +1,24 @@
+{
+    "name": "codewiser/laravel",
+    "description": "Packages I might include to every Laravel application",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "pm",
+            "email": "pm@101media.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.1",
+        "codewiser/dadata": "^1.0",
+        "codewiser/http-cache-control": "^1.0",
+        "codewiser/laravel-cast-datetime-tz": "^1.0",
+        "codewiser/laravel-meilisearch": "^1.0",
+        "codewiser/laravel-notifications": "^0.0.1",
+        "codewiser/laravel-sendsay-mailer": "^1.0",
+        "codewiser/workflow": "^4.4",
+        "codewiser/socialiteprovider": "^1.0"
+    }
+}

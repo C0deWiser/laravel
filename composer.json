@@ -20,5 +20,8 @@
         "codewiser/laravel-sendsay-mailer": "^1.0",
         "codewiser/workflow": "^4.4",
         "codewiser/socialiteprovider": "^1.0"
+    },
+    "require-dev": {
+        "codewiser/laravel-make": "^1.0"
     }
 }

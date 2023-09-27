@@ -16,7 +16,7 @@
         "codewiser/http-cache-control": "^1.0",
         "codewiser/laravel-cast-datetime-tz": "^1.0",
         "codewiser/laravel-meilisearch": "^1.0",
-        "codewiser/laravel-notifications": "^0.0.1",
+        "codewiser/laravel-notifications": "^1.0",
         "codewiser/laravel-sendsay-mailer": "^1.0",
         "codewiser/workflow": "^4.4",
         "codewiser/socialiteprovider": "^1.0"

@@ -21,6 +21,7 @@
         "codewiser/workflow": "^4.4",
         "codewiser/socialiteprovider": "^1.0",
         "codewiser/laravel-make": "^1.0",
-        "codewiser/telegram-channel": "^1.0"
+        "codewiser/telegram-channel": "^1.0",
+        "codewiser/intl": "^1.0"
     }
 }

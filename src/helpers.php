@@ -9,23 +9,15 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 if (! function_exists('Codewiser\tag')) {
     function tag($tag): string
     {
-        if (is_string($tag) && is_a($tag, Model::class, true)) {
-            $tag = new $tag;
+        if ($tag instanceof Model) {
             $model = class_basename($tag->getMorphClass());
             if ($tag->incrementing) {
                 return "$model:{$tag->getKey()}";
             } else {
+                if ($tag instanceof Pivot) {
+                    return "$model:{$tag->getForeignKey()},{$tag->getRelatedKey()}";
+                }
                 return $model;
-            }
-        }
-
-        if (is_string($tag) && is_a($tag, Pivot::class, true)) {
-            $tag = new $tag;
-            $model = class_basename($tag->getMorphClass());
-            if ($tag->incrementing) {
-                return "$model:{$tag->getKey()}";
-            } else {
-                return "$model:{$tag->getForeignKey()},{$tag->getRelatedKey()}";
             }
         }
 

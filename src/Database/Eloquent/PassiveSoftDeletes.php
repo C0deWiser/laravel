@@ -4,9 +4,12 @@ namespace Codewiser\Database\Eloquent;
 
 
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Carbon;
 
 /**
  * Disabled by default SoftDeletes trait.
+ *
+ * @property null|Carbon $deleted_at
  */
 trait PassiveSoftDeletes
 {

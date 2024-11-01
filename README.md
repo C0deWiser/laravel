@@ -101,8 +101,8 @@ class User extends Model
 
 This trait applicable to any `BelongsToMany` custom `Builder`.
 
-It provides `whereBelongsToMany` and `orWhereBelongsToMany` methods, that 
-works alike `whereHas` and `orWhereHas` methods, but sends to a callback not 
+It provides `whereHasMany` and `whereDoesntHaveMany` methods, that 
+works alike `whereHas` and `whereDoesntHave` methods, but sends to a callback not 
 a `Builder` instance, but `BelongsToMany` instance.
 
 This allows to make `pivot` calls:
@@ -120,11 +120,19 @@ class BookBuilder extends Builder
 ```php
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-Book::query()->whereBelongsToMany('authors', fn(BelongsToMany $builder) => $builder
+Book::query()->whereHasMany('authors', fn(BelongsToMany $builder) => $builder
     ->wherePivot('role', 'author')
     ->where('name', 'Edgar Allan Poe')
 );
 ```
+
+As `BelongsTo` relation may be restricted by related model or collection, as 
+`BelongsToMany` too.
+
+```php
+Book::query()->whereBelongsToMany(Author::query()->findMany([1, 2, 3]));
+```
+
 
 ## Passive SoftDeletes
 

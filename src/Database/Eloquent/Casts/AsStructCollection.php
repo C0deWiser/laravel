@@ -76,4 +76,18 @@ class AsStructCollection implements Castable
 
         return static::class.':'.implode(',', array_filter($args));
     }
+
+    /**
+     * Specify the collection and/or model for the cast.
+     *
+     * @param  class-string<Collection|Pivot>  $class
+     * @param  null|class-string<Pivot>  $struct
+     * @param  bool  $required
+     *
+     * @return string
+     */
+    public static function of(string $class, string $struct = null, bool $required = false): string
+    {
+        return static::using($class, $struct, $required);
+    }
 }

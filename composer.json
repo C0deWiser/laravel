@@ -23,6 +23,17 @@
         "codewiser/telegram-channel": "^1.0",
         "codewiser/intl": "^1.0",
         "codewiser/laravel-scout": "^1.0",
-        "codewiser/laravel-smscenter-mailer": "^1.0"
+        "codewiser/laravel-smscenter-mailer": "^1.0",
+        "cerbero/enum": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codewiser\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
     }
 }

@@ -2,6 +2,7 @@
 
 namespace Tests;
 
+use Illuminate\Database\Eloquent\Relations\Relation;
 use PHPUnit\Framework\TestCase;
 use Tests\Mock\Backed;
 use Tests\Mock\Employee;
@@ -31,6 +32,9 @@ class NamesTest extends TestCase
         $this->assertEquals('User#1', tag($model));
         $model->incrementing = false;
         $this->assertEquals('User', tag($model));
+
+        Relation::morphMap(['user' => User::class]);
+        $this->assertEquals('user#null', tag(new User()));
 
         $pivot = new Employee();
         $this->assertEquals('Employee#null,null', tag($pivot));

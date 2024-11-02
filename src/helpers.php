@@ -43,10 +43,7 @@ if (!function_exists('Codewiser\ability')) {
      */
     function ability(callable $ability): string
     {
-        if (is_array($ability) && is_callable($ability, true)) {
-            $ability = $ability[1];
-        }
-        return $ability;
+        return ref($ability);
     }
 }
 
@@ -56,9 +53,19 @@ if (!function_exists('Codewiser\relation')) {
      */
     function relation(callable $relation): string
     {
-        if (is_array($relation) && is_callable($relation, true)) {
-            $relation = $relation[1];
+        return ref($relation);
+    }
+}
+
+if (!function_exists('Codewiser\ref')) {
+    /**
+     * Resolve method name from a method reference.
+     */
+    function ref(callable $callable): string
+    {
+        if (is_array($callable) && is_callable($callable, true)) {
+            $callable = $callable[1];
         }
-        return $relation;
+        return $callable;
     }
 }

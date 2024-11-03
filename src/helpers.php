@@ -40,8 +40,10 @@ if (!function_exists('Codewiser\tag')) {
 if (!function_exists('Codewiser\ability')) {
     /**
      * Resolve ability name from a method reference.
+     *
+     * @param callable $ability
      */
-    function ability(callable $ability): string
+    function ability($ability): string
     {
         return ref($ability);
     }
@@ -50,8 +52,10 @@ if (!function_exists('Codewiser\ability')) {
 if (!function_exists('Codewiser\relation')) {
     /**
      * Resolve relation name from a method reference.
+     *
+     * @param callable $relation
      */
-    function relation(callable $relation): string
+    function relation($relation): string
     {
         return ref($relation);
     }
@@ -60,8 +64,10 @@ if (!function_exists('Codewiser\relation')) {
 if (!function_exists('Codewiser\ref')) {
     /**
      * Resolve method name from a method reference.
+     *
+     * @param callable $callable
      */
-    function ref(callable $callable): string
+    function ref($callable): string
     {
         if (is_array($callable) && is_callable($callable, true)) {
             $callable = $callable[1];

@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * Allows to make queries to a pivot table.
  *
  * @mixin Builder
+ * @deprecated
  */
 trait HasPivot
 {

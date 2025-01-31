@@ -97,42 +97,6 @@ class User extends Model
 }
 ```
 
-## HasPivot trait
-
-This trait applicable to any `BelongsToMany` custom `Builder`.
-
-It provides `whereHasMany` and `whereDoesntHaveMany` methods, that 
-works alike `whereHas` and `whereDoesntHave` methods, but sends to a callback not 
-a `Builder` instance, but `BelongsToMany` instance.
-
-This allows to make `pivot` calls:
-
-```php
-use Illuminate\Database\Eloquent\Builder;
-use Codewiser\Database\Eloquent\Traits\HasPivot;
-
-class BookBuilder extends Builder
-{
-    use HasPivot;
-}
-```
-
-```php
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-
-Book::query()->whereHasMany('authors', fn(BelongsToMany $builder) => $builder
-    ->wherePivot('role', 'author')
-    ->where('name', 'Edgar Allan Poe')
-);
-```
-
-As `BelongsTo` relation may be restricted by related model or collection, as 
-`BelongsToMany` too.
-
-```php
-Book::query()->whereBelongsToMany(Author::query()->findMany([1, 2, 3]));
-```
-
 
 ## Passive SoftDeletes
 
@@ -142,5 +106,5 @@ default.
 Also, it counts record as trashed only then `deleted_at` is reached. So you 
 may trash records in perspective.
 
-It comes with `HasDeletedAt` trait, that is applicable to custom builders 
-with the same behavior.
+It comes with `\Codewiser\Database\Eloquent\Traits\HasDeletedAt` trait, 
+that is applicable to custom builders with the same behavior.

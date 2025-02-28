@@ -10,6 +10,8 @@ use Illuminate\Support\Carbon;
  * Disabled by default SoftDeletes trait.
  *
  * @property null|Carbon $deleted_at
+ *
+ * @deprecated
  */
 trait PassiveSoftDeletes
 {

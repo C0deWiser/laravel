@@ -6,11 +6,13 @@ use Illuminate\Contracts\Database\Query\Builder;
 
 /**
  * @mixin Builder
+ *
+ * @deprecated
  */
 trait HasPassiveDeletedAt
 {
     /**
-     * @return static
+     * @return $this
      */
     public function onlyTrashed($boolean = 'and')
     {
@@ -18,7 +20,7 @@ trait HasPassiveDeletedAt
     }
 
     /**
-     * @return static
+     * @return $this
      */
     public function orOnlyTrashed()
     {
@@ -26,7 +28,7 @@ trait HasPassiveDeletedAt
     }
 
     /**
-     * @return static
+     * @return $this
      */
     public function withoutTrashed($boolean = 'and')
     {
@@ -38,7 +40,7 @@ trait HasPassiveDeletedAt
     }
 
     /**
-     * @return static
+     * @return $this
      */
     public function orWithoutTrashed()
     {

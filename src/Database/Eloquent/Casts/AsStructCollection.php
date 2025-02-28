@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Casts\Json;
 use Illuminate\Database\Eloquent\Relations\Pivot;
 use Illuminate\Support\Collection;
 
+/**
+ * @deprecated
+ */
 class AsStructCollection implements Castable
 {
     public static function castUsing(array $arguments): CastsAttributes

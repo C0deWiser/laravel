@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 if (!function_exists('Codewiser\tag')) {
     /**
      * Make tag for a job.
+     *
+     * @deprecated
      */
     function tag($tag): string
     {
@@ -42,6 +44,8 @@ if (!function_exists('Codewiser\ability')) {
      * Resolve ability name from a method reference.
      *
      * @param callable $ability
+     *
+     * @deprecated
      */
     function ability($ability): string
     {
@@ -54,6 +58,8 @@ if (!function_exists('Codewiser\relation')) {
      * Resolve relation name from a method reference.
      *
      * @param callable $relation
+     *
+     * @deprecated
      */
     function relation($relation): string
     {
@@ -66,6 +72,8 @@ if (!function_exists('Codewiser\ref')) {
      * Resolve method name from a method reference.
      *
      * @param callable $callable
+     *
+     * @deprecated
      */
     function ref($callable): string
     {

@@ -11,7 +11,17 @@
     ],
     "abandoned": true,
     "suggest": {
-        "codewiser/soft-deletes": "Provides Soft Deleting (Passive)"
+        "codewiser/casts": "Provides set of casts for Laravel",
+        "codewiser/dadata": "Provides DaData Service for Laravel",
+        "codewiser/http-cache-control": "Provides Cache-Control management for Laravel",
+        "codewiser/laravel-notifications": "Provides Notification helpers for Laravel",
+        "codewiser/laravel-sendsay-mailer": "Provides SendSay mailer for Laravel",
+        "codewiser/workflow": "Brings State Machine / Workflow behaviour to Eloquent Models",
+        "codewiser/telegram-channel": "Provides Telegram Notification channel for Laralel",
+        "codewiser/intl": "Provides cast for multilingual attributes for Laravel",
+        "codewiser/laravel-scout": "Provides Scout helpers for Laravel",
+        "codewiser/soft-deletes": "Provides Soft Deleting (Passive) for Laravel",
+        "codewiser/simple-files": "Provides simple file manager for Laravel"
     },
     "require": {
         "php": "^8.1",

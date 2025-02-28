@@ -10,6 +10,9 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
 use Illuminate\Support\Collection;
 use JsonSerializable;
 
+/**
+ * @deprecated
+ */
 class AsStruct implements Castable
 {
     public static function castUsing(array $arguments): CastsAttributes
